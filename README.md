@@ -27,3 +27,8 @@ The application was created in step-by-step, so if you want to look through each
 | Screenshot 01 |
 | ------------- |
 | ![screenshot01](.screenshots/screenshot01.png) |
+
+### [Basics quick start: SKShapeNode](https://github.com/fdorado985/SwiftyNinja/tree/basics-quick-start-skshapenode)
+| Screenshot 02 |
+| ------------- |
+| ![screenshot02](.screenshots/screenshot02.png) |
