@@ -34,6 +34,6 @@ The application was created in step-by-step, so if you want to look through each
 | ![screenshot02](.screenshots/screenshot02.png) |
 
 ### [Shaping up for action: CGPath and UIBezierPath](https://github.com/fdorado985/SwiftyNinja/tree/shaping-up-for-action-cgpath-and-uibezierpath)
-| Screenshot 02 |
+| Screenshot 03 |
 | ------------- |
-| ![screenshot02](.screenshots/screenshot02.png) |
+| ![screenshot03](.screenshots/screenshot03.png) |
