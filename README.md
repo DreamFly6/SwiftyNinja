@@ -37,3 +37,10 @@ The application was created in step-by-step, so if you want to look through each
 | Screenshot 03 |
 | ------------- |
 | ![screenshot03](.screenshots/screenshot03.png) |
+
+### [Enemy or bomb: AVAudioPlayer](https://github.com/fdorado985/SwiftyNinja/tree/enemy-or-bomb-avaudioplayer)
+> It is basically same status as before but now with the logic to be able to create enemies, and bombs their position, movement and velocity.
+> 
+| Screenshot 03 |
+| ------------- |
+| ![screenshot03](.screenshots/screenshot03.png) |
