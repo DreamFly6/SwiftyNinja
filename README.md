@@ -44,3 +44,8 @@ The application was created in step-by-step, so if you want to look through each
 | Screenshot 03 |
 | ------------- |
 | ![screenshot03](.screenshots/screenshot03.png) |
+
+### [Follow the sequence](https://github.com/fdorado985/SwiftyNinja/tree/follow-the-sequence)
+| Screenshot 04 |
+| ------------- |
+| ![screenshot04](.screenshots/screenshot04.png) |
