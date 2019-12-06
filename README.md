@@ -40,12 +40,19 @@ The application was created in step-by-step, so if you want to look through each
 
 ### [Enemy or bomb: AVAudioPlayer](https://github.com/fdorado985/SwiftyNinja/tree/enemy-or-bomb-avaudioplayer)
 > It is basically same status as before but now with the logic to be able to create enemies, and bombs their position, movement and velocity.
-> 
+
 | Screenshot 03 |
 | ------------- |
 | ![screenshot03](.screenshots/screenshot03.png) |
 
 ### [Follow the sequence](https://github.com/fdorado985/SwiftyNinja/tree/follow-the-sequence)
+| Screenshot 04 |
+| ------------- |
+| ![screenshot04](.screenshots/screenshot04.png) |
+
+### [Slice to win](https://github.com/fdorado985/SwiftyNinja/tree/slice-to-win)
+> In this part the code is not compiling, so the status is basically as before with compile errors.
+
 | Screenshot 04 |
 | ------------- |
 | ![screenshot04](.screenshots/screenshot04.png) |
