@@ -56,3 +56,9 @@ The application was created in step-by-step, so if you want to look through each
 | Screenshot 04 |
 | ------------- |
 | ![screenshot04](.screenshots/screenshot04.png) |
+
+### [Game over, man: SKTexture](https://github.com/fdorado985/SwiftyNinja/tree/game-over-man-sktexture)
+
+| Screenshot 05 |
+| ------------- |
+| ![screenshot05](.screenshots/screenshot05.png) |
