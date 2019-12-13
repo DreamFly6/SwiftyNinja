@@ -54,15 +54,6 @@ class GameScene: SKScene {
   var nextSequenceQueued = true
   var isGameEnded = false
 
-  // Magic numbers
-
-  let offScreenLimit = -128
-  let xPositionRange = Int.random(in: 64...960)
-  let yVelocityRange = Int.random(in: 24...32)
-  let xVelocityRangeForScreenCenter = Int.random(in: 3...5)
-  let xVelocityRangeForScreenBorders = Int.random(in: 8...15)
-  let angularVelocityRange = CGFloat.random(in: -3...3)
-
   // MARK: - Scene cycle
 
   override func didMove(to view: SKView) {
@@ -309,6 +300,7 @@ class GameScene: SKScene {
   }
 
   private func createEnemy(forceBomb: ForceBomb = .random) {
+    print("===== createEnemy(forceBomb:) was called")
     let enemy: SKSpriteNode
     var enemyType  = Int.random(in: 1...6)
 
@@ -350,12 +342,20 @@ class GameScene: SKScene {
       }
     }
 
+    let offScreenLimit = -128
+    let xPositionRange = Int.random(in: 64...960)
     let randomPosition = CGPoint(x: xPositionRange, y: offScreenLimit)
     enemy.position = randomPosition
 
+    let angularVelocityRange = CGFloat.random(in: -3...3)
     let randomAngularVelocity = angularVelocityRange
     let randomXVelocity: Int
 
+
+
+    let yVelocityRange = Int.random(in: 24...32)
+    let xVelocityRangeForScreenCenter = Int.random(in: 3...5)
+    let xVelocityRangeForScreenBorders = Int.random(in: 8...15)
     if randomPosition.x < 256 {
       randomXVelocity = xVelocityRangeForScreenBorders
     } else if randomPosition.x < 512 {
