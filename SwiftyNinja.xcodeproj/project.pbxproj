@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A95489C723A4626500222434 /* award@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A95489C623A4626500222434 /* award@2x.png */; };
 		A9C9DD3A239628F30038287D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9DD39239628F30038287D /* AppDelegate.swift */; };
 		A9C9DD3C239628F30038287D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A9C9DD3B239628F30038287D /* GameScene.sks */; };
 		A9C9DD40239628F30038287D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9DD3F239628F30038287D /* GameScene.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A95489C623A4626500222434 /* award@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "award@2x.png"; sourceTree = "<group>"; };
 		A9C9DD36239628F30038287D /* SwiftyNinja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyNinja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C9DD39239628F30038287D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9C9DD3B239628F30038287D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		A9C9DD5123962C910038287D /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				A95489C623A4626500222434 /* award@2x.png */,
 				A9C9DD5223962C910038287D /* sliceFuse.sks */,
 				A9C9DD5323962C910038287D /* sliceLife@2x.png */,
 				A9C9DD5423962C910038287D /* sliceBomb@2x.png */,
@@ -187,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95489C723A4626500222434 /* award@2x.png in Resources */,
 				A9C9DD7223962C910038287D /* swoosh2.caf in Resources */,
 				A9C9DD45239628F30038287D /* Main.storyboard in Resources */,
 				A9C9DD7023962C910038287D /* penguin@2x.png in Resources */,

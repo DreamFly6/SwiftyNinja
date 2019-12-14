@@ -19,6 +19,9 @@ enum SequenceType: CaseIterable {
   case four
   case chain
   case fastChain
+  case award
+  case awardWithOneBomb
+  case awardWithTwoBombs
 }
 
 enum ForceBomb {
@@ -74,7 +77,7 @@ class GameScene: SKScene {
     createLives()
     createSlices()
 
-    sequence = [.oneNoBomb, .oneNoBomb, .twoWithOneBomb, .twoWithOneBomb, .three, .one, .chain]
+    sequence = [.oneNoBomb, .oneNoBomb, .awardWithOneBomb, .twoWithOneBomb, .twoWithOneBomb, .three, .one, .chain]
 
     for _ in 0 ... 1000 {
       if let nextSequence = SequenceType.allCases.randomElement() {
@@ -95,7 +98,7 @@ class GameScene: SKScene {
         if node.position.y < -140 {
           node.removeAllActions()
 
-          if node.name == "enemy" {
+          if node.name == "enemy" || node.name == "award" {
             node.name = ""
             subtractLife()
 
@@ -164,12 +167,13 @@ class GameScene: SKScene {
 
     let nodesAtPoint = nodes(at: location)
     for case let node as SKSpriteNode in nodesAtPoint {
-      if node.name == "enemy" {
+      if node.name == "enemy" || node.name == "award" {
         if let emitter = SKEmitterNode(fileNamed: "sliceHitEnemy") {
           emitter.position = node.position
           addChild(emitter)
         }
 
+        let isAward = node.name == "award"
         node.name = ""
         node.physicsBody?.isDynamic = false
 
@@ -180,7 +184,7 @@ class GameScene: SKScene {
         let seq = SKAction.sequence([group, .removeFromParent()])
         node.run(seq)
 
-        score += 1
+        score += isAward ? 10 : 1
 
         if let index = activeEnemies.firstIndex(of: node) {
           activeEnemies.remove(at: index)
@@ -299,8 +303,7 @@ class GameScene: SKScene {
     }
   }
 
-  private func createEnemy(forceBomb: ForceBomb = .random) {
-    print("===== createEnemy(forceBomb:) was called")
+  private func createEnemy(forceBomb: ForceBomb = .random, isAward: Bool = false) {
     let enemy: SKSpriteNode
     var enemyType  = Int.random(in: 1...6)
 
@@ -336,9 +339,9 @@ class GameScene: SKScene {
         enemy.addChild(emitter)
       }
     } else {
-      enemy = SKSpriteNode(imageNamed: "penguin")
+      enemy = SKSpriteNode(imageNamed: isAward ? "award" : "penguin")
       run(SKAction.playSoundFileNamed("launch.caf", waitForCompletion: false)) {
-        enemy.name = "enemy"
+        enemy.name = isAward ? "award" : "enemy"
       }
     }
 
@@ -438,6 +441,15 @@ class GameScene: SKScene {
       DispatchQueue.main.asyncAfter(deadline: .now() + (chainDelay / 10.0 * 4)) { [weak self] in
         self?.createEnemy()
       }
+    case .award:
+      createEnemy(forceBomb: .never, isAward: true)
+    case .awardWithOneBomb:
+      createEnemy(forceBomb: .never, isAward: true)
+      createEnemy(forceBomb: .always)
+    case .awardWithTwoBombs:
+      createEnemy(forceBomb: .never, isAward: true)
+      createEnemy(forceBomb: .always)
+      createEnemy(forceBomb: .always)
     }
 
     sequencePosition += 1
